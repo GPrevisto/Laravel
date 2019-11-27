@@ -30,7 +30,7 @@ $(function(){
       //console.log(id);
       console.log(plants);
         var d = $('#lista');
-        d.append('<tr><td>'+ plants.name +' </td><td>'+plants.scientific_name+'</td><td>'+plants.description+'</td><td>'+ plants.isCarnivora +'</td><td><a href="delete/'+plants.id+'"> D </a></td><td><a href="/edit/'+plants.id+'"> E </a></td></tr>');
+        d.append('<tr><td>'+ plants.name +' </td><td>'+plants.scientific_name+'</td><td>'+plants.description+'</td><td>'+ plants.isCarnivora +'</td><td><button id="delete" class="btn btn-primary" data-resource="{{$plant->id}}"> D </button></td><td><button id="edit" class="btn btn-primary" data-resource="{{$plant->id}}"> E </button></td></tr>');
 
     });
 
@@ -56,9 +56,8 @@ $(function(){
    $.get('delete/'+resource,function(plants){
 
       console.log(plants);
-        var d = $('#lista');
-        d.append('<tr><td>'+ plants.name +' </td><td>'+plants.scientific_name+'</td><td>'+plants.description+'</td><td>'+ plants.isCarnivora +'</td><td><a href="delete/'+plants.id+'"> D </a></td><td><a href="/edit/'+plants.id+'"> E </a></td></tr>');
-
+        var d = $('#'+resource);
+       d.closest('tr').fadeOut();
     });
 
     });

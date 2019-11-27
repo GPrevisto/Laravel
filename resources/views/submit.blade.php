@@ -134,7 +134,7 @@
 @endphp
   @foreach ($plants as $plant)
 
-    <tr>
+    <tr id="{{$plant->id}}">
       
       <td>{{ $plant->name }}</td>
       <td>{{ $plant->scientific_name }}</td>
@@ -142,7 +142,7 @@
       <td>
       {{ $plant->isCarnivora == 1 ? 'Sim' : 'Não' }}
       </td>
-      <td><a id="delete" class="btn btn-primary" data-resource="{{$plant->id}}"> D </a></td>
+      <td><button id="delete" class="btn btn-primary" data-resource="{{$plant->id}}"> D </button></td>
       <td><button id="edit" class="btn btn-primary" data-resource="{{$plant->id}}"> E </button></td>
       
     </tr>
