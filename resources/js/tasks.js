@@ -13,8 +13,6 @@ $(function(){
     //console.log(id);
     console.log(plants);
   })
-rr
-
   });
 });
 
