@@ -53,11 +53,12 @@ $(function(){
         }
       });
       
-   $.get('delete/'+resource,function(plants){
+   $.get('delete/'+resource,function(){
 
-      console.log(plants);
+     
         var d = $('#'+resource);
-       d.closest('tr').fadeOut();
+        console.log('#'+resource);
+       d.remove();  	
     });
 
     });
