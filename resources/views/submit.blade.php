@@ -142,8 +142,8 @@
       <td>
       {{ $plant->isCarnivora == 1 ? 'Sim' : 'Não' }}
       </td>
-      <td><button id="delete" class="btn btn-primary" data-resource="{{$plant->id}}"> D </button></td>
-      <td><button id="edit" class="btn btn-primary" data-resource="{{$plant->id}}"> E </button></td>
+      <td><button id="delete" name="{{$plant->id}}"class="btn btn-primary" data-resource="{{$plant->id}}"> D </button></td>
+      <td><button id="edit" name="{{$plant->id}}" class="btn btn-primary" data-resource="{{$plant->id}}"> E </button></td>
       
     </tr>
     

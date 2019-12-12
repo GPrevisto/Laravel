@@ -29,14 +29,14 @@ Route::post('/submit', 'PlantController@store')->name('store');
 
 Route::get('/lista', 'PlantController@lista')->name('lista');
 
-Route::post('/edit/{id}', 'PlantController@edit')->name('edit');
+//Route::post('/edit/{id}', 'PlantController@edit')->name('edit');
 
-Route::get('/edit/{id}', 'PlantController@update')->name('update');
+//Route::get('/edit/{id}', 'PlantController@update')->name('update');
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/mostrar-nome/{id}/{id1}', 'AjaxController@show');
 Route::post('/mostrar-lista', 'AjaxController@lista');
 Route::get('/delete/{id}', 'AjaxController@delete')->name('delete');
-
+Route::get('/edit/{id}', 'AjaxController@edit')->name('edit');
 Auth::routes();
 Route::get('/teste', 'PlantController@teste')->name('teste');

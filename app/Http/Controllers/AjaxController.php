@@ -44,5 +44,13 @@ class AjaxController extends Controller
         return redirect('/submit');
     }
 
+    public function edit($id)
+    {
+        $plant = \App\Plant::findOrFail($id);
+     
+
+        return \Response::json($plant);
+    }
+
 
 }
