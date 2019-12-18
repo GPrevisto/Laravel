@@ -36,6 +36,29 @@ class AjaxController extends Controller
         return \Response::json($plants);
     }
     
+       
+    public function alterar(Request $request) {
+        
+        $data = $request->validate([
+            'name' => 'required|max:255',
+            'scientific_name' => 'required|max:255',
+            'description' => 'required|max:255',
+            'isCarnivora' => 'max:255',
+        ]);
+        $id = $request->id;
+        $name = $request->name;
+        $scientific_name= $request->scientific_name;
+        $description= $request->description;
+        $isCarnivora= $request->isCarnivora;
+        $plant = where("id",$id)->update([
+            'name' => $name,
+            'scientific_name' => $scientific_name,
+            'description' => $description,
+            'isCarnivora' => $isCarnivora,]);
+
+        return \Response::json($plants);
+    }
+
     public function delete($id)
     {
         $plant = \App\Plant::findOrFail($id);

@@ -36,6 +36,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/mostrar-nome/{id}/{id1}', 'AjaxController@show');
 Route::post('/mostrar-lista', 'AjaxController@lista');
+Route::post('/alterar-lista', 'AjaxController@alterar');
 Route::get('/delete/{id}', 'AjaxController@delete')->name('delete');
 Route::get('/edit/{id}', 'AjaxController@edit')->name('edit');
 Auth::routes();

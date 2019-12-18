@@ -70,7 +70,7 @@
     <div class="container">
         <div class="">
             <h1>Submit a Plant</h1>
-            <form class="form" action="{{ action('PlantController@store') }}" method="post">
+            <form class="form" id="form" action="{{ action('PlantController@store') }}" method="post">
                 @if ($errors->any())
                     <div class="alert alert-danger" role="alert">
                         Please fix the following errors
